@@ -1,155 +1,134 @@
 
 :root {
-  --bg: #ffffff;
-  --text: #111111;
-  --primary: #000000;
-  --gray: #888888;
-  --accent: #ffcc00;
-}
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  --bg: #fff;
+  --text: #111;
+  --accent: #e3b505;
+  --gray: #777;
+  --light: #f5f5f5;
 }
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: var(--bg);
+  background: var(--bg);
   color: var(--text);
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.5rem 3rem;
-  background-color: #fafafa;
+  padding: 1.25rem 2rem;
   border-bottom: 1px solid #eee;
-  position: sticky;
-  top: 0;
-  z-index: 10;
+  font-weight: 600;
 }
 
 .logo {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   font-weight: 700;
-  color: var(--primary);
 }
 
 nav a {
   margin-left: 2rem;
   text-decoration: none;
-  font-weight: 500;
   color: var(--text);
-  transition: color 0.2s ease-in-out;
-}
-
-nav a:hover {
-  color: var(--accent);
 }
 
 .hero {
   text-align: center;
-  padding: 6rem 2rem;
-  background: linear-gradient(to bottom, #fff, #f9f9f9);
-  animation: fadeIn 1s ease;
-}
-
-.hero h1 {
-  font-size: 3.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.hero p {
-  font-size: 1.25rem;
-  color: var(--gray);
-  max-width: 600px;
-  margin: 0 auto 2rem auto;
-}
-
-.btn {
-  padding: 0.8rem 2rem;
-  border-radius: 9999px;
-  text-decoration: none;
-  font-weight: 600;
-  display: inline-block;
-  margin: 0.5rem;
-  transition: transform 0.2s, background-color 0.3s;
-}
-
-.btn-primary {
-  background-color: var(--primary);
+  padding: 6rem 2rem 3rem;
+  background: linear-gradient(to bottom, #000, #111);
   color: #fff;
 }
 
-.btn-primary:hover {
-  background-color: #333;
-  transform: scale(1.05);
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 0.75rem;
 }
 
-.btn-secondary {
-  border: 2px solid var(--primary);
-  color: var(--primary);
+.hero p {
+  font-size: 1.2rem;
+  color: #ccc;
+  margin-bottom: 2rem;
 }
 
-.btn-secondary:hover {
-  background-color: #eee;
-  transform: scale(1.05);
+.cta .btn {
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  margin: 0 0.5rem;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.primary {
+  background: #000;
+  color: #fff;
+  border: 2px solid #000;
+}
+
+.secondary {
+  background: transparent;
+  color: #fff;
+  border: 2px solid var(--accent);
+}
+
+.primary:hover, .secondary:hover {
+  opacity: 0.9;
 }
 
 .featured {
   padding: 4rem 2rem;
+  background: #fff;
   text-align: center;
-  background-color: #fefefe;
 }
 
 .featured h2 {
-  font-size: 2.5rem;
+  font-size: 2rem;
   margin-bottom: 2rem;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 2rem;
-  max-width: 1100px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  max-width: 1000px;
   margin: auto;
 }
 
 .card {
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s;
+  background: #fcf7f1;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.05);
+  text-align: left;
 }
 
-.card:hover {
-  transform: translateY(-5px);
-}
-
-.card img {
-  width: 100%;
-  border-radius: 12px 12px 0 0;
+.card h3 {
+  margin: 0 0 0.5rem;
 }
 
 .card p {
-  padding: 1rem;
-  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.tag {
+  display: inline-block;
+  background: #111;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  margin-top: 0.5rem;
 }
 
 footer {
   text-align: center;
   padding: 2rem;
-  color: #aaa;
+  color: #888;
+  background: var(--light);
   font-size: 0.9rem;
-  background-color: #f9f9f9;
-  border-top: 1px solid #eee;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
 }
